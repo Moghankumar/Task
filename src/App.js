@@ -1,23 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./image.png";
+import "./App.css";
+import { FiEdit } from "react-icons/fi";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="cardbox">
+        <div>
+          <img src={logo} alt="logo" />
+        </div>
+        <div>
+          <p className="welcometext"> Welcome Back !</p>
+        </div>
+        <div>
+          <FiEdit
+            style={{
+              marginLeft: "3rem",
+              position: "absolute",
+              marginTop: "1rem",
+              color: "#BFBFBF",
+            }}
+          />
+          <input
+            type="text"
+            className="textbox"
+            placeholder="Your Registration Number"
+          />
+        </div>
+        <div>
+          <button type="submit" className="submitbutton">
+            Next &nbsp;&nbsp; >
+          </button>
+        </div>
+        <div>
+          <a href="#" className="forget">
+            Forgot your registration number? Click here
+          </a>
+        </div>
+      </div>
     </div>
   );
 }
